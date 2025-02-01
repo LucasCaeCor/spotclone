@@ -1,0 +1,358 @@
+body{
+    background-color: #000;
+    font-family: var(--font--dm-sans)
+}
+
+h1{
+    color: #fff;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+
+}
+
+.sidebar__navigation {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.logo{
+    background: #121212;
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+
+}
+.logo img{
+    width: 80px;
+
+}
+
+.sidebar nav ul{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+
+}
+
+.sidebar ul li{
+    padding: 10px 0;
+}
+.sidebar nav ul li a{
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600px;
+    font-size: 14px;
+
+}
+
+.desktop-left-sidebar{
+    position: fixed;
+    margin: 10px 10px 10px 0px;
+    height: 300px;
+    background-color: #000000;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+
+}
+
+
+/* BOTOES */
+.botoes {
+    display: flex; /* Define layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaçamento horizontal */
+    padding: 10px; /* Espaçamento interno */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.botoes svg {
+    width: 20px; /* Ajusta o tamanho do ícone */
+    height: 20px;
+    flex-shrink: 0; /* Garante que o ícone não será redimensionado */
+    fill: #888888; /* Cor inicial do ícone */
+    transition: fill 0.3s ease; /* Animação suave da mudança de cor */
+}
+
+/* Botão com ícone e texto */
+.botao-biblioteca {
+    display: flex; /* Flex layout para alinhamento do texto e ícone */
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    gap: 8px; /* Espaço entre ícone e texto */
+    background-color: #121212; /* Cor de fundo inicial */
+    color: #888888; /* Texto inicial cinza */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animação suave */
+}
+
+.botao-biblioteca:hover, path{
+      color: #ffffff; /* Texto fica branco ao passar o mouse */
+}
+
+/* Botão apenas com ícone */
+.botao-adicionar {
+    display: flex; /* Flex para centralizar o ícone */
+    align-items: center;
+    justify-content: center;
+    background-color: #121212; /* Cor de fundo inicial */
+    border: none; /* Remove borda padrão */
+    padding: 10px;
+    border-radius: 50%; /* Botão circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animação suave */
+}
+
+
+.botao-adicionar .fa-plus{
+    color: #555;
+}
+
+
+.botao-adicionar .fa-plus:hover{
+    color: #ffffff;
+    transition: fill 1s ease; /* Transição suave na cor */
+}
+
+svg:hover path {
+    fill: #ffffff; /* Cor ao passar o mouse no SVG */
+}
+
+.botao-adicionar:hover {
+    background-color: #1a1a1a; /* Leve alteração na cor de fundo */
+}
+
+/* Efeito de hover nos ícones dentro dos botões */
+.botao-biblioteca svg,
+.botao-adicionar svg {
+    fill: #888888; /* Cor inicial dos ícones */
+    transition: fill 0.3s ease; /* Transição suave na cor */
+    
+}
+
+.botao-biblioteca:hover svg,
+.botao-adicionar:hover svg {
+    fill: #888888;
+
+     /* Ícones ficam brancos ao passar o mouse */
+}
+
+
+
+.sidebar__navigation__biblioteca{
+    max-width: 300px;
+    background-color: #121212;
+    border-radius: 8px;
+}
+
+.content{
+    background-color: #121212;
+    padding: 30px;
+}
+
+.item{
+    margin: 25px -25px;
+    background-color: #2b2727;
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+    
+    
+}
+
+.item button {
+    padding: 10px 10px; /* Espaçamento interno para aumentar conforme o conteúdo */
+    margin: 10px 0 10px 10px; /* Espaçamento externo */
+    border-radius: 50px; /* Bordas arredondadas */
+    color: #000000; /* Cor do texto */
+    background-color: #ffffff; /* Cor de fundo */
+    font-size: 15px; /* Tamanho do texto */
+    margin-right: auto; /* Faz o botão se alinhar à esquerda */
+    margin-left: 0;
+    font-weight: bold; /* Texto em negrito */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suave animação */
+}
+
+
+.item button:hover {
+    background-color: #e0e0e0; /* Fundo mais claro ao passar o mouse */
+    color: #000000; /* Mantém o texto preto */
+}
+
+.item h2, 
+.item p {
+    font-size: 14px; /* Tamanho do texto */
+    color: white; /* Cor do texto */
+    padding: 5px;
+}
+
+.item {
+    padding: 25px 0 10px 010px; /* Espaçamento interno */
+}
+
+/* Define altura e comportamento da área rolável */
+.scrollable-content {
+    max-height: 200px; /* Altura fixa da área rolável */
+    overflow-y: auto; /* Habilita barra de rolagem vertical */
+    padding-right: 8px; /* Espaço para a barra de rolagem */
+}
+
+/* Estilo da barra de rolagem (opcional, para aparência personalizada) */
+.scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor da barra de rolagem */
+    border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor ao passar o mouse */
+}
+
+
+
+.footer-lateral {
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    top: 0; /* Começa no topo da tela */
+    left: 0; /* Fixa à esquerda */
+    display: flex;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    gap: 10px; /* Espaçamento entre os elementos */
+    padding: 2px;
+    background-color: #121212;
+    margin-bottom: 0;
+}
+
+.linksInternos {
+    display: flex;
+    flex-wrap: wrap; /* Itens podem quebrar linha quando necessário */
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding padrão da lista */
+    margin: 0; /* Remove o margin padrão da lista */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.linksInternos li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff; /* Cor do texto */
+    font-size: 10px !important;  /* Tamanho da fonte reduzido em 50% */
+     transition: color 0.3s ease; /* Transição suave para o hover */
+}
+.linksInternos li a:hover {
+    color: #e0e0e0; /* Cor do texto ao passar o mouse */
+}
+
+.botao-globo{
+    display: flex;
+    width: 60%;
+    height: 40px;
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    border: 0.1px solid #ffffff; /* Borda sólida de 2px */
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: #121212; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
+    font-size: 14px; /* Tamanho do texto */
+    cursor: pointer; /* Mostra o cursor de mão ao passar */
+    margin-right: auto; /* Faz o botão se alinhar à esquerda */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    margin-bottom: 200px;
+}
+
+.botao-globo svg {
+    width: 10%;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.botao-globo:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+.footer-side{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(135deg, #8a0f97, #0f80c2);
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+
+.textos {
+    left: 0;
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 5px;
+    color: white; /* Define a cor do texto para branco */
+    max-width: 60%; /* Limita a largura máxima do contêiner de texto */
+    width: 100%; /* Ocupa 100% da largura disponível */
+    word-wrap: break-word; /* Permite quebrar as palavras quando necessário */
+}
+
+.textos h2, .textos p {
+    margin: 0; /* Remove margens padrão */
+    word-break: break-word; /* Quebra palavras longas, se necessário */
+    overflow-wrap: break-word; /* Garante que o texto não ultrapasse a largura do contêiner */
+}
+
+
+
+.botao-container {
+    display: flex;
+    position: absolute;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    width: 100%; /* Faz o contêiner ocupar toda a largura */
+    padding-right: 50px ;
+}
+
+.btn-footer {
+    background-color: white; /* Fundo branco do botão */
+    color: black; /* Letra preta no botão */
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: backgrouncolor 0.3s, color 0.3s;
+
+}
+
+.btn-footer:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: #f0f0f0; /* Cor de fundo suave ao passar o mouse */
+}
+
+.btn-footer a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Mantém a cor do botão */
+}
+
+
+

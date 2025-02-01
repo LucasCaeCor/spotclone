@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Spotify</title>
+
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/vars.css">
+    <link rel="stylesheet" href="src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="src/styles/main-content.css">
+    <link rel="stylesheet" href="src/styles/principal.css">
+    <link rel="stylesheet" href="src/styles/media-query.css">
+
+    <link rel="shortcut icon" href="src/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <nav class="sidebar__navigation">
+            <div class="logo">
+                <a href="">
+                    <img src="src/assets/playlist/logospotify.png" alt="logo do spotify">
+                </a>
+            </div>
+                <ul>
+                    <li>
+                        <a href=""><span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10px" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#fff" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10px" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                            <span>Buscar</span>
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+        <!-- continuação da barra de navegação -->
+        <div class="desktop-left-sidebar">
+            <nav class="sidebar__navigation__biblioteca">
+                <div class="biblioteca">
+                    <div class="botoes">
+                        <button class="botao-biblioteca">
+                            <span class="fa fas fa-book">
+                            </span>
+                            <span>Sua Biblioteca</span>
+                        </button>
+                        <span>
+                            <button class="botao-adicionar">
+                                <span class="fa fa-plus" >
+                                </span>    
+                            </button>
+                        </span>
+                    </div>
+                    <section>
+                        <div class="scrollable-content">
+                            <div class="content">
+                                <div class="slide-bar">
+                                    <div class="item">
+                                        <h2>Crie sua primeira playlist</h2>
+                                        <p>É fácil, vamos te ajudar.</p>
+                                        <button>Criar playlist</button>
+                                    </div>
+                                    <div class="item">
+                                        <h2>Que tal seguir um podcast novo?</h2>
+                                        <p>Avisaremos você sobre novos episódios.</p>
+                                        <button>Explore podcasts</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="footer-lateral">
+                        <div class="link">
+                            <ul class="linksInternos">
+                                <li><a href="#">Legal</a></li>
+                                <li><a href="#">Segurança e Centro de privacidade</a></li>
+                                <li><a href="#">Política de privacidade</a></li>
+                                <li><a href="#">Cookies</a></li>
+                                <li><a href="#">Sobre anúncios</a></li>
+                                <li><a href="#">Acessibilidade</a></li>
+                                <li><a href="#">Cookies</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-globe">
+                            <span>
+                                <button class="botao-globo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/></svg>
+                                    <span class="content-text">Portuguê do Brasil</span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+<!-- cabeçalho -->
+<main>
+    <div class="main-container">
+        <nav class="header__navigation">
+            <div class="navigation">
+                <button class="arrow-left">
+                    <img src="./src/assets/icons/chevron-esquerdo.png"  width="25px" alt="Seta esquerda" />
+                </button>
+                <button class="arrow-right">
+                    <img src="./src/assets/icons/chevron-direito.png" width="25px" alt="Seta direita" />
+                </button>
+                <div class="header__search">
+                    <img src="./src/assets/icons/search.png" alt="Ícone de busca" />
+                    <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+                        placeholder="O que você quer ouvir?" value="" />
+                </div>
+            </div>
+            <div class="header__login">
+                <button class="subscribe">Inscreva-se</button>
+                <button class="login">Entrar</button>
+            </div>
+        </nav>
+
+        <!-- PLAYLIST -->
+        <div class="playlist-container">
+            <div id="result-playlists">
+                <div class="playlist">
+                    <h1 id="greeting"></h1>
+                    <h2 class="session">Navegar por todas as seções</h2>
+                </div>
+
+                <div class="offer__scroll-container">
+                    <div class="offer__list">
+                        <section class="offer__list-item">
+                            <!-- Exibição dinâmica de playlists -->
+                            <a href="#" class="cards">
+                                <div class="cards card1">
+                                    <img src="./src/assets/playlist/1.jpeg" alt="Boas festas" />
+                                    <span>Boas festas</span>
+                                </div>
+                            </a>
+                            <a href="#" class="cards">
+                                <div class="cards card2">
+                                    <img src="./src/assets/playlist/2.png" alt="Feitos para você" />
+                                    <span>Feitos para você</span>
+                                </div>
+                            </a>
+                            <a href="#" class="cards">
+                                <div class="cards card3">
+                                    <img src="./src/assets/playlist/3.jpeg" alt="Lançamentos" />
+                                    <span>Lançamentos</span>
+                                </div>
+                            </a>
+                            <a href="#" class="cards">
+                                <div class="cards card4">
+                                    <img src="./src/assets/playlist/4.jpeg" alt="Creators" />
+                                    <span>Creators</span>
+                                </div>
+                            </a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-artist" class="hidden artista">
+                <div class="grid-container">
+                    <div class="artist-card">
+                        <div class="card-img">
+                            <img id="artist-img" class="artist-img" alt="Imagem do artista" />
+                            <div class="play">
+                                <span class="fa fa-solid fa-play"></span>
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <a title="Foo Fighters" class="vst" href="#">
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-categorie"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- footer -->
+
+<footer class="footer-side">
+    <div class="textos">
+        <h2>Testar o Premium de graça</h2>
+        <p>Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</p>
+    </div>
+    <div class="botao-container">
+        <button class="btn-footer">
+            <span>
+                <a href="#">Inscreva-se grátis</a>
+            </span>
+        </button>
+    </div>
+</footer>
+
+<script src="js/search.js" ></script>
+
+
+
+</body>
+</html>
